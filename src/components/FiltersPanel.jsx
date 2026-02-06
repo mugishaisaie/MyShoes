@@ -68,4 +68,36 @@ export default function FiltersPanel({ filters, setFilters, brands, availableSiz
                  <input name="minPrice" value={filters.minPrice} onChange={onChange} placeholder="Min" className="w-1/2 border dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded px-2 py-1 text-sm" type="number" />
                  <input name="maxPrice" value={filters.maxPrice} onChange={onChange} placeholder="Max" className="w-1/2 border dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded px-2 py-1 text-sm" type="number" />
           </div>
-        <
+        </div>
+
+        <div>
+          <label className="block text-xs font-medium">Size</label>
+          <select name="size" value={filters.size} onChange={onChange} className="w-full border rounded px-2 py-1 text-sm">
+            <option value="">Any</option>
+            {availableSizes.map(s => <option key={s} value={s}>{s}</option>)}
+          </select>
+        </div>
+
+        <div>
+          <label className="block text-xs font-medium">Color</label>
+          <select name="color" value={filters.color} onChange={onChange} className="w-full border rounded px-2 py-1 text-sm">
+            <option value="">Any</option>
+            {colors.map(c => <option key={c} value={c}>{c}</option>)}
+          </select>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <input id="inStock" name="inStock" type="checkbox" checked={filters.inStock} onChange={onChange} />
+          <label htmlFor="inStock" className="text-sm">In stock only</label>
+                 <select name="size" value={filters.size} onChange={onChange} className="w-full border dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded px-2 py-1 text-sm">
+                 <select name="color" value={filters.color} onChange={onChange} className="w-full border dark:border-slate-600 dark:bg-slate-700 dark:text-white rounded px-2 py-1 text-sm">
+                   <label htmlFor="inStock" className="text-sm dark:text-slate-300">In stock only</label>
+        </div>
+
+        <div className="flex gap-2">
+          <button onClick={onClear} className="px-3 py-1 border rounded text-sm">Clear filters</button>
+        </div>
+      </div>
+    </aside>
+  )
+}

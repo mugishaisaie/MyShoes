@@ -58,4 +58,16 @@ export default function CategoriesSection() {
                   <p className="text-sm opacity-90 mb-4">{category.description}</p>
                   <div className="inline-flex items-center gap-2 font-semibold">
                     <span>Explore</span>
-                    <svg className="w-4 h-4 group-hover:
+                    <svg className="w-4 h-4 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}

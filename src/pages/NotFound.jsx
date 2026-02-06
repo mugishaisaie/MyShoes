@@ -7,4 +7,10 @@ export default function NotFound() {
       <h1 className="text-3xl font-bold">404 — Page not found</h1>
       <p className="mt-4 text-slate-600">We couldn't find the page you were looking for.</p>
            <h1 className="text-3xl font-bold dark:text-white">404 — Page not found</h1>
-             <p className="mt-4 text-slate-600 dark:text-slate
+             <p className="mt-4 text-slate-600 dark:text-slate-400">We couldn't find the page you were looking for.</p>
+      <div className="mt-6">
+        <Link to="/" className="px-4 py-2 bg-primary text-white rounded">Go home</Link>
+      </div>
+    </div>
+  )
+}

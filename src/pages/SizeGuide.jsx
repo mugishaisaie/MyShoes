@@ -16,4 +16,22 @@ export default function SizeGuide() {
                      <thead className="bg-slate-100 dark:bg-slate-800">
             <tr>
               <th className="p-2 text-left">EU Size</th>
-              <th className="p-2 text-left">Length (cm
+              <th className="p-2 text-left">Length (cm)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sizeGuide.map(row => (
+              <tr key={row.eu} className="border-t">
+                <td className="p-2">{row.eu}</td>
+                <td className="p-2">{row.cm.toFixed(1)} cm</td>
+                           <tr key={row.eu} className="border-t dark:border-slate-700 dark:hover:bg-slate-800">
+                             <td className="p-2 dark:text-slate-300">{row.eu}</td>
+                             <td className="p-2 dark:text-slate-300">{row.cm.toFixed(1)} cm</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  )
+}

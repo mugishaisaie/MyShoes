@@ -10,4 +10,7 @@ export default function RatingStars({ value = 0 }) {
         </svg>
       ))}
       <span className="ml-2 text-xs text-slate-600">{value.toFixed(1)}</span>
-      <span classNam
+      <span className="ml-2 text-xs text-slate-600 dark:text-slate-400">{value.toFixed(1)}</span>
+    </div>
+  )
+}

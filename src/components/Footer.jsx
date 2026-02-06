@@ -30,4 +30,21 @@ export default function Footer() {
               <li><Link to="/size-guide" className="text-slate-700">Size Guide</Link></li>
               <li><a className="text-slate-700" href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
                          <h5 className="font-semibold dark:text-white">Contact</h5>
-     
+                         <p className="text-sm text-slate-600 dark:text-slate-400 mt-2">Phone: +250 78 000 0000</p>
+                         <p className="text-sm text-slate-600 dark:text-slate-400">Email: support@myshoes.rw</p>
+                         <p className="text-sm mt-2">WhatsApp: <a className="text-accent hover:underline" href="https://wa.me/250780000000">Chat with us</a></p>
+                       </div>
+
+                       <div>
+                         <h5 className="font-semibold dark:text-white">Quick Links</h5>
+                         <ul className="text-sm mt-2 space-y-1">
+                           <li><Link to="/shop" className="text-slate-700 dark:text-slate-300 hover:text-accent">Shop</Link></li>
+                           <li><Link to="/size-guide" className="text-slate-700 dark:text-slate-300 hover:text-accent">Size Guide</Link></li>
+                           <li><a className="text-slate-700 dark:text-slate-300 hover:text-accent" href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}

@@ -14,3 +14,11 @@ export default function ProductCard({ product }) {
         <p className="text-xs text-slate-500">{product.brand}</p>
              <article className="border dark:border-slate-700 rounded-md overflow-hidden hover:shadow dark:hover:shadow-lg transition dark:bg-slate-800">
                <p className="text-xs text-slate-500 dark:text-slate-400">{product.brand}</p>
+        <div className="mt-2 flex items-center justify-between">
+          <RatingStars value={product.rating} />
+          <Price price={product.priceRWF} oldPrice={product.oldPriceRWF} />
+        </div>
+      </div>
+    </article>
+  )
+}

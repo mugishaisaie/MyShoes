@@ -118,3 +118,11 @@ export default function Shop() {
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
                   {filtered.map(p => <ProductCard key={p.id} product={p} />)}
                 </div>
+              )}
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}

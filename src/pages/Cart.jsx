@@ -74,4 +74,20 @@ export default function Cart() {
             <div className="mt-4">
               <div className="flex justify-between"><span>Subtotal</span><span>{formatRWF(subtotal)}</span></div>
               <div className="mt-2 text-sm text-slate-600">Delivery calculated on confirmation.</div>
-                         <aside className="border dark:border-slate-700 dark:bg-slate-800 round
+                         <aside className="border dark:border-slate-700 dark:bg-slate-800 rounded p-4">
+                           <h3 className="font-semibold dark:text-white">Order summary</h3>
+                           <div className="mt-2 text-sm text-slate-600 dark:text-slate-400">Delivery calculated on confirmation.</div>
+              <div className="mt-4">
+                <button onClick={checkoutWhatsapp} className="w-full px-4 py-2 bg-accent text-white rounded">Checkout via WhatsApp</button>
+              </div>
+              <div className="mt-3 flex gap-2">
+                <Link to="/shop" className="px-3 py-2 border rounded text-sm">Continue shopping</Link>
+                <button onClick={clearCart} className="px-3 py-2 border rounded text-sm">Clear cart</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      )}
+    </div>
+  )
+}

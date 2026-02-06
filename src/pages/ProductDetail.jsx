@@ -100,4 +100,20 @@ export default function ProductDetail() {
                          <h4 className="font-semibold dark:text-white">Description</h4>
                            <p className="text-sm text-slate-700 dark:text-slate-300 mt-2">{product.description}</p>
                            <ul className="list-disc ml-5 mt-2 text-sm text-slate-700 dark:text-slate-300">
-              {product.features.map((f, i) => <li key={i}>{f}</li>)
+              {product.features.map((f, i) => <li key={i}>{f}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {related.length > 0 && (
+        <section className="mt-8">
+          <h3 className="text-lg font-semibold mb-4">Related products</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            {related.map(p => <ProductCard key={p.id} product={p} />)}
+          </div>
+        </section>
+      )}
+    </div>
+  )
+}
